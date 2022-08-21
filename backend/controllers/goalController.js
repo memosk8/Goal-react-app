@@ -27,14 +27,18 @@ const setGoal = asyncHandler(async (req, res) => {
 * @route   PUT /api/goals/:id
 * @access  Private
 */
-const updateGoal = asyncHandler(async (req, res) => res.status(200).json({ message: `Update goal id: ${req.params.id}` }));
+const updateGoal = asyncHandler(
+  async (req, res) => res.status(200).json({ message: `Update goal id: ${req.params.id}` })
+);
 
 /**
  * @desc    Delete goal
  * @route   DELETE /api/goals/:id
  * @access  Private
  */
-const deleteGoal = asyncHandler(async (req, res) => res.status(200).json({ message: `Delete goal id: ${req.params.id}` }));
+const deleteGoal = asyncHandler(
+  async (req, res) => res.status(200).json({ message: `Delete goal id: ${req.params.id}` })
+);
 
 module.exports = {
   getGoals, setGoal, updateGoal, deleteGoal
