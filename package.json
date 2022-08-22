@@ -1,5 +1,5 @@
 {
-  "name": "Goal setting app",
+  "name": "goal-app",
   "version": "1.0.0",
   "description": "Organize, manage and controll your teams at a glance",
   "main": "server.js",
