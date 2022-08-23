@@ -1,4 +1,4 @@
-const 
+const
   mongoose = require('mongoose'),
   userSchema = mongoose.Schema({
     name: {
@@ -14,10 +14,13 @@ const
       type: String,
       required: [true, 'Please add your password']
     },
-    // admin: {
-    //   type: Boolean,
-    //   required: [true, 'Please select user level']
-    // }
-  }, {timestamps: true});
+    admin: {
+      type: Number,
+      min: 0,
+      max: 1,
+      required: false,
+      default: false
+    }
+  }, { timestamps: true });
 
 module.exports = mongoose.model('User', userSchema);

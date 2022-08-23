@@ -1,5 +1,3 @@
-const { findByIdAndUpdate } = require('../models/goalModel');
-
 const
   asyncHandler = require('express-async-handler'),
   Goal = require('../models/goalModel'),
@@ -11,7 +9,7 @@ const
    */
   getGoals = asyncHandler(async (req, res) => {
     const goals = await Goal.find(); // find all goals
-    res.status(200).json(goals); // respond with found goals
+    res.status(200).json(goals); // respond with stored goals
   }),
 
   /**
@@ -56,12 +54,8 @@ const
       throw new Error('Goal not found')
     }
 
-    await goal.remove();
-
-    res.status(200).json({id: req.params.id})
+    await goal.remove()
+    res.status(200).json({ id: req.params.id })
   });
 
-
-module.exports = {
-  getGoals, setGoal, updateGoal, deleteGoal
-};
+module.exports = { getGoals, setGoal, updateGoal, deleteGoal };
