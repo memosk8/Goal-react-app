@@ -22,7 +22,7 @@ const
       res.status(400)/* .json({message: "please add text field"}) */
       throw new Error('Please add text field')
     }
-    const goal = await Goal.create({ text: req.body.text })
+    const goal = await Goal.create({ text: req.body.text, user: req.body.user })
     res.status(200).json({ goal })
   }),
 
