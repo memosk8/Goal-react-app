@@ -22,7 +22,15 @@ const
       res.status(400)/* .json({message: "please add text field"}) */
       throw new Error('Please add text field')
     }
-    const goal = await Goal.create({ text: req.body.text, user: req.body.user })
+
+    // check if user exists
+    const userExists = require('../models/userModel').findById(req.body.user)
+    if(!userExists){
+      res.status(400)
+      throw new Error('User not found')
+    }
+
+    const goal = await Goal.create({ text: req.body.text, user: req.user.id })
     res.status(200).json({ goal })
   }),
 
