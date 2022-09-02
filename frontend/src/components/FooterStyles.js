@@ -2,9 +2,8 @@ import styled from 'styled-components';
 
 export const Box = styled.div`
 padding: 70px 60px;
-background: black;
+background: #5F4f1591;
 position: relative;
-
 width: 100%;
 maring-top: 20px;
 
@@ -27,10 +26,12 @@ display: flex;
 flex-direction: column;
 text-align: left;
 margin-left: 60px;
+
 `;
 
 export const Row = styled.div`
 display: grid;
+
 grid-template-columns: repeat(auto-fill,
 						minmax(185px, 1fr));
 grid-gap: 20px;
@@ -42,7 +43,8 @@ grid-gap: 20px;
 `;
 
 export const FooterLink = styled.a`
-color: #fff;
+color: #000000;
+
 margin-bottom: 20px;
 font-size: 18px;
 text-decoration: none;
@@ -55,8 +57,9 @@ text-align: center;
 `;
 
 export const Heading = styled.p`
+
 font-size: 24px;
-color: #fff;
+color: dark;
 margin: 30px 0;
 font-weight: bold;
 text-align: center;

@@ -12,8 +12,13 @@ const Footer = () => {
   return (
     <Box>
       <h1 style={{
-        color: "lightblue",
-        textAlign: "center"
+        color: "yellowgreen",
+        textAlign: "center",
+        border: "1px solid black",
+        fontSize: "35px",
+        padding: "1rem",
+        borderRadius: "15px",
+        backgroundColor: "whitesmoke"
       }}>
         Track your goals like there's no tomorrow
       </h1>
